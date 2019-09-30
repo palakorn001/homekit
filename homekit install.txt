@@ -1,0 +1,37 @@
+
+
+
+
+sudo apt-get update
+sudo apt-get install git-core libnss-mdns libavahi-compat-libdnssd-dev.
+wget https://nodejs.org/dist/latest-v7.x/node-v7.10.0-linux-xxxxxx.tar.gz (change xxxxxx with your architecture - check your rpi's docs or use the command "lscpu" to find out what the architecture is, rpi3 is armv7l)
+tar -xvf node-v7.10.0-linux-xxxxxx.tar.gz
+cd node-v7.10.0-linux-xxxxxx.tar.gz
+sudo cp -R * /usr/local/
+cd ..
+sudo npm config set registry http://registry.npmjs.org/
+sudo npm install -g node-gyp
+//............................................
+   Clone the HAP-NodeJS project:
+git clone https://github.com/KhaosT/HAP-NodeJS.git
+
+  Go into the directory where you cloned it:
+cd HAP-NodeJS
+
+  Rebuild npm:
+npm rebuild
+
+  Install modules:
+npm install
+
+  Try to run the server:
+node Core.js
+
+
+
+
+หรือ การติดตั้ง NodeJS
+
+wget https://nodejs.org/dist/v4.3.2/node-v4.3.2-linux-armv6l.tar.gz 
+tar -xvf node-v4.3.2-linux-armv6l.tar.gz 
+cd node-v4.3.2-linux-armv6l
